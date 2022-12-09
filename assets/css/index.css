@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Frutiger";
+  src: url("FrutigerNextLTW1G-Light.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Frutiger";
+  src: url("FrutigerLT-Bold.ttf");
+  font-weight: bold;
+}
+
+body {
+  font-family: "Frutiger", Fallback, sans-serif;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion-button {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-icon {
+  fill: none;
+  stroke: #666666;
+}
+
+.is-active .header-icon path {
+  stroke: #dc0000;
+}
+
+.is-active .header-icon polyline {
+  stroke: #dc0000;
+}
+
+.is-active .header-icon line {
+  stroke: #dc0000;
+}
+
+.is-active .header-title {
+  color: #dc0000;
+}
+
+.header-bottom-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #dc0000;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.is-active .header-bottom-line {
+  display: block;
+}
+
+.svg-icon {
+  fill: none;
+  stroke: #666;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+}
+
+.svg-icon-bold {
+  stroke-width: 2.8346;
+}
+
+.accordion-block h3 {
+  color: #dc0000;
+  font-size: 1.625rem;
+  line-height: 2.25rem;
+}
+
+.accordion-block p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+.accordion-block b {
+  font-weight: 700;
+}
+
+.accordion-block ul {
+  margin-top: 0.5rem;
+}
+
+.accordion-block ul li {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.accordion-block ul li svg {
+  margin-right: 0.5rem;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.accordion-block ul li div {
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+.accordion-block ul li:hover svg polyline {
+  stroke: #20a76a;
+  stroke-width: 4;
+}
+
+.accordion-block button {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  background: #dc0000;
+  border-radius: 0.125rem;
+  padding: 0.625rem 0.75rem;
+}
+
+.accordion-block table {
+  width: 100%;
+}
+
+.accordion-block table tr {
+  border-top-width: 1px;
+  border-top-color: #e7e7e7;
+}
+
+.accordion-block table tr td {
+  padding: 0.875rem 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .accordion-block p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .accordion-block ul {
+    margin-top: 2rem;
+  }
+
+  .accordion-block ul li {
+    margin-top: 1.5rem;
+  }
+
+  .accordion-block ul li svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .accordion-block ul li div {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .accordion-block button {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .accordion-block table tr td {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}

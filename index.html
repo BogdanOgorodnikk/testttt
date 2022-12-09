@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <script src="js/tailwind.js"></script>
+    <script src="js/tailwind.config.js"></script>
+    <title>Schindler Green Service</title>
+  </head>
+
+  <body onload="calculateBlocks()">
+    <div class="wrapper">
+      <div class="md:flex hidden justify-between border border-gray-200">
+        <div
+          onclick="onClickChangeAccordionBlock(0, [1145.28, 52])"
+          class="accordion-button is-active p-4 mx-auto text-center w-full border-r border-gray-200"
+        >
+          <svg
+            class="header-icon mx-auto h-16 w-16"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="10 10 30 30"
+          >
+            <g id="icons">
+              <path
+                class="svg-icon"
+                d="M15.09,26.17V36.65a1.17,1.17,0,0,0,1.17,1.17H21.5a.58.58,0,0,0,.59-.58V32.58a2.91,2.91,0,1,1,5.82,0v4.66a.58.58,0,0,0,.59.58h5.24a1.17,1.17,0,0,0,1.17-1.17v-9.9"
+              />
+              <path class="svg-icon" d="M11.6,25.58,25,12.18l13.4,13.4" />
+            </g>
+          </svg>
+
+          <div class="header-title text-gray-300 text-xl mt-2.5 mb-3">
+            Wohnhäuser
+          </div>
+
+          <div class="header-bottom-line"></div>
+        </div>
+
+        <div
+          onclick="onClickChangeAccordionBlock(1, [4829.91, 69])"
+          class="accordion-button p-4 mx-auto text-center w-full border-r border-gray-200"
+        >
+          <svg
+            class="header-icon mx-auto h-16 w-16"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="5 0 40 46"
+          >
+            <path
+              class="svg-icon"
+              d="M19.33,15.94a3.64,3.64,0,0,0,3.19-3.55,3.54,3.54,0,0,0-3.68-3.54A5,5,0,0,0,14.36,6a5.12,5.12,0,0,0-5.13,4.67A2.66,2.66,0,0,0,6,13.28c0,2.7,2.84,2.66,2.84,2.66ZM40.68,35.75V37.4m-3.3-1.65V37.4m-3.3-1.65V37.4m6.6-8.26V30.8m-3.3-1.66V30.8m-3.3-1.66V30.8m6.6-8.26v1.65m-3.3-1.65v1.65m-3.3-1.65v1.65m6.6-8.25v1.65m-3.3-1.65v1.65m-3.3-1.65v1.65m6.6-8.25V11m-3.3-1.65V11m-3.3-1.65V11m-6.6,28.06H20.87v-3.3h6.61Zm0-6.6H20.87V29.14h6.61ZM14.27,40.7H11V44h3.3Zm3.3-9.9H9.32L6,35.75H17.57Zm-9.9,4.95h9.9V44H7.67Zm16.5-16.51-6.6,6.6H30.78Zm-6.6,6.6H30.78V44H17.57ZM30.78,6H44V44H30.78Z"
+            />
+          </svg>
+
+          <div class="header-title text-gray-300 text-xl mt-2.5 mb-3">
+            Mittelgroße und große Bürogebäude
+          </div>
+
+          <div class="header-bottom-line"></div>
+        </div>
+
+        <div
+          onclick="onClickChangeAccordionBlock(2, [7146.41, 67])"
+          class="accordion-button p-4 mx-auto text-center w-full"
+        >
+          <svg
+            class="header-icon mx-auto h-16 w-16"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="6 10 37 28"
+          >
+            <polyline
+              class="svg-icon"
+              points="12.42 40.24 12.42 13.28 23.73 13.28 23.73 40.24"
+            />
+            <path
+              class="svg-icon"
+              d="M27.42,36.09v4.69m0-4.63v4.69m3.32-4.69v4.69m3.31-4.69v4.69m-6.63-9v.71m0-.69v.71m3.32-.71v.71m3.31-.71v.71M27.42,27.2v.71m0-.69v.7m3.32-.7v.7m3.31-.7v.7"
+            />
+            <path class="svg-icon" d="M26.89,23.47H37.58V40.89" />
+            <path
+              class="svg-icon"
+              d="M15.84,21.81h4.47m-4.47-4.18h4.47m-4.47,8.54h4.47m-4.47,4.36h4.47m-4.47,4.36h4.47"
+            />
+            <line class="svg-icon" x1="6.5" y1="40.89" x2="43.5" y2="40.89" />
+            <path
+              class="svg-icon"
+              d="M39.05,18.65A2.69,2.69,0,0,0,41.41,16a2.62,2.62,0,0,0-2.71-2.61,3.66,3.66,0,0,0-3.31-2.09,3.77,3.77,0,0,0-3.78,3.44,2,2,0,0,0-2.37,1.92c0,2,2.1,2,2.1,2Z"
+            />
+          </svg>
+
+          <div class="header-title text-gray-300 text-xl mt-2.5 mb-3">
+            Öffentliche Gebäude und Gesundheitswesen
+          </div>
+
+          <div class="header-bottom-line"></div>
+        </div>
+      </div>
+
+      <div
+        onclick="onClickChangeAccordionBlock(0, [1145.28, 52])"
+        class="accordion-button md:hidden flex p-5 border border-gray-200"
+      >
+        <svg
+          class="header-icon mr-3 w-7 h-7"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="10 10 30 30"
+        >
+          <g id="icons">
+            <path
+              class="svg-icon"
+              d="M15.09,26.17V36.65a1.17,1.17,0,0,0,1.17,1.17H21.5a.58.58,0,0,0,.59-.58V32.58a2.91,2.91,0,1,1,5.82,0v4.66a.58.58,0,0,0,.59.58h5.24a1.17,1.17,0,0,0,1.17-1.17v-9.9"
+            />
+            <path class="svg-icon" d="M11.6,25.58,25,12.18l13.4,13.4" />
+          </g>
+        </svg>
+
+        <div class="header-title text-gray-300 text-[1.625rem]">Wohnhäuser</div>
+      </div>
+
+      <div class="accordion-block md:block hidden p-5 md:p-20 bg-gray-100">
+        <div class="md:flex">
+          <div class="flex-1 md:mr-10">
+            <h3>
+              Sie interessieren sich für eine Stromersparnis in Ihrem Wohnhaus?
+            </h3>
+
+            <div class="bg-white p-5 my-5 md:hidden">
+              <h3 class="md:mb-6">Eckdaten</h3>
+
+              <table>
+                <tr>
+                  <td class="text-base-red">Gewicht:</td>
+
+                  <td class="text-black">1125 kg</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Halte:</td>
+
+                  <td class="text-black">6</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Fahrten/Tag:</td>
+
+                  <td class="text-black">830</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Förderhöhe:</td>
+
+                  <td class="text-black">15 m</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Kers:</td>
+
+                  <td class="text-black">1</td>
+                </tr>
+              </table>
+            </div>
+
+            <p class="mt-2">
+              Wo wir uns täglich bewegen und aufhalten, suchen wir nach
+              effektiven Möglichkeiten, Strom zu sparen – um Kosten zu
+              reduzieren, aber auch um einen Beitrag zu einer
+              klimafreundlicheren Zukunft zu leisten. Mit der Energiespeicherbox
+              Schindler KERS können Sie den Aufzug wie gewohnt einsetzen und
+              dabei trotzdem Strom einsparen. Die Bremsenergie wird dabei
+              gespeichert und bei der nächsten Fahrt wieder abgegeben. So wurde
+              es auch in diesem Mehrparteienhaus in Hamburg umgesetzt:
+            </p>
+
+            <p class="md:mt-8 mt-2">
+              „KERS war für uns nicht nur die Möglichkeit, schnell Strom zu
+              sparen, sondern auch einen Beitrag für eine grünere Zukunft zu
+              leisten.“
+            </p>
+
+            <p class="md:mt-8 mt-2">
+              „Klar es ist eine Investition in die Zukunft, jedoch ist der Preis
+              des KERS im Vergleich zu anderen Energiesparmaßnahmen wie einer
+              PV-Anlage oder einer Wärmepumpe überschaubar, es rentiert sich
+              schneller und vor allem ist der KERS sofort verfügbar. So konnte
+              bereits kurze Zeit nach der Entscheidung für den KERS das System
+              von Schindler am Aufzug installiert werden.“
+            </p>
+
+            <ul>
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>Entschieden Strom sparen</div>
+              </li>
+
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>Sofortige Verfügbarkeit</div>
+              </li>
+
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>Ihr Beitrag für eine grünere Zukunft</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1 md:block hidden">
+            <div
+              class="bg-white md:px-[2.625rem] md:pt-9 md:pb-9 p-5 md:mb-[3.375rem] mb-5 md:mt-0 mt-5"
+            >
+              <h3 class="md:mb-6">Eckdaten</h3>
+
+              <table>
+                <tr>
+                  <td class="text-base-red">Gewicht:</td>
+
+                  <td class="text-black">1125 kg</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Halte:</td>
+
+                  <td class="text-black">6</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Fahrten/Tag:</td>
+
+                  <td class="text-black">830</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Förderhöhe:</td>
+
+                  <td class="text-black">15 m</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Kers:</td>
+
+                  <td class="text-black">1</td>
+                </tr>
+              </table>
+            </div>
+
+            <img class="flex-1 w-full" src="assets/img/homeScreen.jpg" />
+          </div>
+        </div>
+
+        <div class="calculated-blocks md:flex md:space-x-6 md:mt-6 mt-4">
+          <div class="flex-1 bg-white rounded-sm md:px-6 md:pt-6 md:pb-8 p-4">
+            <div class="md:text-xl text-lg text-black">Verbrauchsreduktion</div>
+
+            <div
+              class="calculated-first-block mt-3 md:text-[3.375rem] text-[2rem] text-base-green"
+            >
+              0 kWh
+            </div>
+          </div>
+
+          <div
+            class="flex-1 bg-white rounded-sm md:px-6 md:pt-6 md:pb-8 p-4 md:mt-0 mt-5"
+          >
+            <div class="md:text-xl text-lg text-black">Esparnis</div>
+
+            <div
+              class="calculated-second-block mt-3 md:text-[3.375rem] text-[2rem] text-base-green"
+            >
+              0%
+            </div>
+          </div>
+        </div>
+
+        <p class="md:mt-7 mt-4">
+          Bei diesem Mehrparteienwohnhaus (umgesetzt 2022 in Hamburg) konnte
+          eine Reduktion um <b class="text-base-green">1145,28 kWh</b> erzielt
+          werden, dies bedeutet eine Ersparnis von
+          <b class="text-base-green">52 %</b> mit Schindler KERS. Gerne führen
+          wir eine individuelle unverbindliche Berechnung auch für Ihr Haus
+          durch, hinterlassen Sie uns hierfür gerne eine Nachricht.
+        </p>
+
+        <button class="md:mt-9 mt-4">
+          <a href="#kontakt">Jetzt berechnen lassen</a>
+        </button>
+      </div>
+
+      <div
+        onclick="onClickChangeAccordionBlock(1, [4829.91, 69])"
+        class="accordion-button md:hidden flex p-5 border border-gray-200"
+      >
+        <svg
+          class="header-icon mr-3 w-7 h-7"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="5 0 40 46"
+        >
+          <path
+            class="svg-icon"
+            d="M19.33,15.94a3.64,3.64,0,0,0,3.19-3.55,3.54,3.54,0,0,0-3.68-3.54A5,5,0,0,0,14.36,6a5.12,5.12,0,0,0-5.13,4.67A2.66,2.66,0,0,0,6,13.28c0,2.7,2.84,2.66,2.84,2.66ZM40.68,35.75V37.4m-3.3-1.65V37.4m-3.3-1.65V37.4m6.6-8.26V30.8m-3.3-1.66V30.8m-3.3-1.66V30.8m6.6-8.26v1.65m-3.3-1.65v1.65m-3.3-1.65v1.65m6.6-8.25v1.65m-3.3-1.65v1.65m-3.3-1.65v1.65m6.6-8.25V11m-3.3-1.65V11m-3.3-1.65V11m-6.6,28.06H20.87v-3.3h6.61Zm0-6.6H20.87V29.14h6.61ZM14.27,40.7H11V44h3.3Zm3.3-9.9H9.32L6,35.75H17.57Zm-9.9,4.95h9.9V44H7.67Zm16.5-16.51-6.6,6.6H30.78Zm-6.6,6.6H30.78V44H17.57ZM30.78,6H44V44H30.78Z"
+          />
+        </svg>
+
+        <div class="header-title text-gray-300 text-[1.625rem]">
+          Mittelgroße und große Bürogebäude
+        </div>
+      </div>
+
+      <div class="accordion-block hidden p-5 md:p-20 bg-gray-100">
+        <div class="md:flex">
+          <div class="flex-1 md:mr-10">
+            <h3>
+              Sie interessieren sich für eine Stromersparnis in Ihrem
+              Bürogebäude?
+            </h3>
+
+            <div class="bg-white p-5 my-5 md:hidden">
+              <h3 class="md:mb-6">Eckdaten</h3>
+
+              <table>
+                <tr>
+                  <td class="text-base-red">Gewicht:</td>
+
+                  <td class="text-black">1500 kg</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Halte:</td>
+
+                  <td class="text-black">15</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Fahrten/Tag:</td>
+
+                  <td class="text-black">1000</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Förderhöhe:</td>
+
+                  <td class="text-black">46 m</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Kers:</td>
+
+                  <td class="text-black">2</td>
+                </tr>
+              </table>
+            </div>
+
+            <p class="mt-2">
+              Bei mittleren und größeren Bürogebäuden gibt es ein immenses
+              Potenzial: Die Aufzüge fahren mehrere Etagen an und sind meist
+              hoch frequentiert. Herstellerunabhängig und sofort verfügbar,
+              lässt sich hier mit Schindler KERS bis zu 70% Strom einsparen. So
+              kann sich die Technik in einem Zeitraum von unter fünf Jahren
+              amortisieren und trägt wesentlich zur Nachhaltigkeit Ihres
+              Gebäudes bei. Wie hier in einem städtischen Verwaltungshaus in
+              Lübeck :
+            </p>
+
+            <p class="md:mt-8 mt-2">
+              „Was die einzelnen Mietparteien leisten, können wir nicht
+              beeinflussen. Jedoch war es uns gerade in diesen Zeiten wichtig,
+              Strom zu sparen und einen Beitrag für eine grüne Zukunft in der
+              Gebäudeinfrastruktur zu leisten.“
+            </p>
+
+            <p class="md:mt-8 mt-2">
+              „Durch die vielen Haltestellen unseres Gebäudes können wir das
+              Potential des KERS technisch voll ausnutzen, so dass sich der KERS
+              bei uns in einem Zeitraum von unter 5 Jahren rentiert“
+            </p>
+
+            <ul>
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>Besonders hohe Stromersparnis</div>
+              </li>
+
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>Sofortige Verfügbarkeit</div>
+              </li>
+
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>Ihr Beitrag für eine grünere Zukunft</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1 md:block hidden">
+            <div
+              class="bg-white md:px-[2.625rem] md:pt-9 md:pb-9 p-5 md:mb-[3.375rem] mb-5 md:mt-0 mt-5"
+            >
+              <h3 class="md:mb-6">Eckdaten</h3>
+
+              <table>
+                <tr>
+                  <td class="text-base-red">Gewicht:</td>
+
+                  <td class="text-black">1500 kg</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Halte:</td>
+
+                  <td class="text-black">15</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Fahrten/Tag:</td>
+
+                  <td class="text-black">1000</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Förderhöhe:</td>
+
+                  <td class="text-black">46 m</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Kers:</td>
+
+                  <td class="text-black">2</td>
+                </tr>
+              </table>
+            </div>
+
+            <img class="flex-1 w-full" src="assets/img/bigHomeScreen.jpg" />
+          </div>
+        </div>
+
+        <div class="calculated-blocks md:flex md:space-x-6 md:mt-6 mt-4">
+          <div class="flex-1 bg-white rounded-sm md:px-6 md:pt-6 md:pb-8 p-4">
+            <div class="md:text-xl text-lg text-black">Verbrauchsreduktion</div>
+
+            <div
+              class="calculated-first-block mt-3 md:text-[3.375rem] text-[2rem] text-base-green"
+            >
+              0 kWh
+            </div>
+          </div>
+
+          <div
+            class="flex-1 bg-white rounded-sm md:px-6 md:pt-6 md:pb-8 p-4 md:mt-0 mt-5"
+          >
+            <div class="md:text-xl text-lg text-black">Esparnis</div>
+
+            <div
+              class="calculated-second-block mt-3 md:text-[3.375rem] text-[2rem] text-base-green"
+            >
+              0%
+            </div>
+          </div>
+        </div>
+
+        <p class="md:mt-7 mt-4">
+          Bei diesem Verwaltungsgebäude (umgesetzt 2022 in Lübeck) konnte eine
+          Reduktion um <b class="text-base-green">4829.91 kWh</b> erzielt
+          werden, dies bedeutet eine Ersparnis von
+          <b class="text-base-green">69 %</b> mit Schindler KERS. Gerne führen
+          wir eine individuelle unverbindliche Berechnung auch für Ihr
+          Geschäftsgebäude durch, hinterlassen Sie uns hierfür gerne eine
+          Nachricht.
+        </p>
+
+        <button class="md:mt-9 mt-4">Jetzt berechnen lassen</button>
+      </div>
+
+      <div
+        onclick="onClickChangeAccordionBlock(2, [7146.41, 67])"
+        class="accordion-button md:hidden flex p-5 border border-gray-200"
+      >
+        <svg
+          class="header-icon mr-3 w-7 h-7"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="6 10 37 28"
+        >
+          <polyline
+            class="svg-icon"
+            points="12.42 40.24 12.42 13.28 23.73 13.28 23.73 40.24"
+          />
+          <path
+            class="svg-icon"
+            d="M27.42,36.09v4.69m0-4.63v4.69m3.32-4.69v4.69m3.31-4.69v4.69m-6.63-9v.71m0-.69v.71m3.32-.71v.71m3.31-.71v.71M27.42,27.2v.71m0-.69v.7m3.32-.7v.7m3.31-.7v.7"
+          />
+          <path class="svg-icon" d="M26.89,23.47H37.58V40.89" />
+          <path
+            class="svg-icon"
+            d="M15.84,21.81h4.47m-4.47-4.18h4.47m-4.47,8.54h4.47m-4.47,4.36h4.47m-4.47,4.36h4.47"
+          />
+          <line class="svg-icon" x1="6.5" y1="40.89" x2="43.5" y2="40.89" />
+          <path
+            class="svg-icon"
+            d="M39.05,18.65A2.69,2.69,0,0,0,41.41,16a2.62,2.62,0,0,0-2.71-2.61,3.66,3.66,0,0,0-3.31-2.09,3.77,3.77,0,0,0-3.78,3.44,2,2,0,0,0-2.37,1.92c0,2,2.1,2,2.1,2Z"
+          />
+        </svg>
+
+        <div class="header-title text-gray-300 text-[1.625rem]">
+          Öffentliche Gebäude und Gesundheitswesen
+        </div>
+      </div>
+
+      <div class="accordion-block hidden p-5 md:p-20 bg-gray-100">
+        <div class="md:flex">
+          <div class="flex-1 md:mr-10">
+            <h3>
+              Sie interessieren sich für eine Stromersparnis in Ihrem
+              öffentlichen Gebäude?
+            </h3>
+
+            <div class="bg-white p-5 my-5 md:hidden">
+              <h3 class="md:mb-6">Eckdaten</h3>
+
+              <table>
+                <tr>
+                  <td class="text-base-red">Gewicht:</td>
+
+                  <td class="text-black">2500 kg</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Halte:</td>
+
+                  <td class="text-black">11</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Fahrten/Tag:</td>
+
+                  <td class="text-black">1100</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Förderhöhe:</td>
+
+                  <td class="text-black">36 m</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Kers:</td>
+
+                  <td class="text-black">3</td>
+                </tr>
+              </table>
+            </div>
+
+            <p class="mt-2">
+              In Krankenhäusern und anderen öffentlichen Gebäuden Strom
+              einzusparen, ist oft eine große Herausforderung. Grenzenlose
+              Barrierefreiheit muss hier auch in Notsituationen wie bei
+              Stromknappheit gewährleistet werden. Hoch frequentierte
+              Gebäudetransportmittel wie der Aufzug bieten hier enormes
+              Einsparpotenzial. Durch den Einbau von Schindler KERS können hier
+              bis zu 70% Ersparnis erzielt werden. So wurde es auch in einem
+              städtischen Krankenhaus in Hamburg umgesetzt:
+            </p>
+
+            <p class="md:mt-8 mt-2">
+              „In unserem Krankenhaus ist immer viel los, dabei ist der Aufzug
+              unerlässlich, da wir mit Rollstuhl und Krankenbetten nicht die
+              Treppe benutzen können.“
+            </p>
+
+            <p class="md:mt-8 mt-2">
+              „Strom wird immer teurer und im schlimmsten Fall Mangelware, so
+              dass es für uns wichtig war, dass unserer unverzichtbarer Aufzug
+              möglichst wenig Strom verbraucht. So kann er auch im Notfall
+              zuverlässig betrieben werden und man muss sich, extrem formuliert,
+              nicht zwischen Aufzug und Beatmungsgerät entscheiden.“
+            </p>
+
+            <ul>
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>Besonders hohe Reduktion der kWh</div>
+              </li>
+
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>
+                  Minimalstbelastung in Notsituationen / bei Stromknappheit
+                </div>
+              </li>
+
+              <li>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 42 42"
+                  style="enable-background: new 0 0 42 42"
+                  xml:space="preserve"
+                >
+                  <polyline
+                    class="svg-icon svg-icon-bold"
+                    points="4.4,14.1 12.2,21.9 27.6,4.1 "
+                  />
+                </svg>
+
+                <div>
+                  Barrierefreiheit gewährleisten und gleichzeitig Stromsparen
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1 md:block hidden">
+            <div
+              class="bg-white md:px-[2.625rem] md:pt-9 md:pb-9 p-5 md:mb-[3.375rem] mb-5 md:mt-0 mt-5"
+            >
+              <h3 class="md:mb-6">Eckdaten</h3>
+
+              <table>
+                <tr>
+                  <td class="text-base-red">Gewicht:</td>
+
+                  <td class="text-black">2500 kg</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Halte:</td>
+
+                  <td class="text-black">11</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Fahrten/Tag:</td>
+
+                  <td class="text-black">1100</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Förderhöhe:</td>
+
+                  <td class="text-black">36 m</td>
+                </tr>
+
+                <tr>
+                  <td class="text-base-red">Kers:</td>
+
+                  <td class="text-black">3</td>
+                </tr>
+              </table>
+            </div>
+
+            <img class="flex-1 w-full" src="assets/img/middleHomeScreen.jpg" />
+          </div>
+        </div>
+
+        <div class="calculated-blocks md:flex md:space-x-6 md:mt-6 mt-4">
+          <div class="flex-1 bg-white rounded-sm md:px-6 md:pt-6 md:pb-8 p-4">
+            <div class="md:text-xl text-lg text-black">Verbrauchsreduktion</div>
+
+            <div
+              class="calculated-first-block mt-3 md:text-[3.375rem] text-[2rem] text-base-green"
+            >
+              0 kWh
+            </div>
+          </div>
+
+          <div
+            class="flex-1 bg-white rounded-sm md:px-6 md:pt-6 md:pb-8 p-4 md:mt-0 mt-5"
+          >
+            <div class="md:text-xl text-lg text-black">Esparnis</div>
+
+            <div
+              class="calculated-second-block mt-3 md:text-[3.375rem] text-[2rem] text-base-green"
+            >
+              0%
+            </div>
+          </div>
+        </div>
+
+        <p class="md:mt-7 mt-4">
+          Bei diesem städtischen Krankenhaus (umgesetzt 2022 in Hamburg) konnte
+          eine Reduktion um <b class="text-base-green">7146.41 kWh</b> erzielt
+          werden, dies bedeutet eine Ersparnis von
+          <b class="text-base-green">67 %</b> mit Schindler KERS. Gerne führen
+          wir eine individuelle unverbindliche Berechnung auch für Ihr
+          öffentliches Gebäude durch, hinterlassen Sie uns hierfür gerne eine
+          Nachricht.
+        </p>
+
+        <button class="md:mt-9 mt-4">Jetzt berechnen lassen</button>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/iframeResizer.contentWindow.min.js"></script>
+  </body>
+</html>
